@@ -1,1 +1,88 @@
-Sample Test File over Golang http.FileServer
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 0-1: HTML基礎確認</title>
+    <script>
+        function updateClock() {
+            // 現在時刻を取得
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // 1桁の場合は0を付ける
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+
+            // 時刻を表示
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        // 1秒ごとにupdateClock関数を実行
+        setInterval(updateClock, 1000);
+
+        // ページ読み込み時に即座に表示
+        window.onload = updateClock;
+    </script>
+</head>
+
+<body>
+        <h1>現在時刻</h1>
+    <div id="clock" style="font-size: 48px; font-weight: bold; color: blue;">
+        00:00:00
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+         alt="サラダ"
+         style="width: 100%; max-width: 600px; height: auto; margin-bottom: 20px;">
+
+    <h1>お薦めな食べ物の紹介</h1>
+    <h1>🌐 Phase 0-1: HTML基礎確認</h1>
+    <div>
+        <h2>📝 課題1: 自己紹介セクション作成</h2>
+        <p><strong>指示:</strong> 下記のHTMLコメント部分に、あなたの自己紹介を書いてください。</p>
+        <!-- ここに自己紹介のHTMLを書いてください
+            <h3>自己紹介</h3>
+        <p>名前: 岩田稔生</p>
+        <p>職業: 大学生</p>
+        <p>趣味: サッカー観戦</p>
+        -->
+        <p>✅ 完了したら、この課題は終了です</p>
+    </div>
+    <div>
+        <h2>📋 課題2: リスト作成</h2>
+        <p><strong>指示:</strong> 好きな食べ物を5つ、番号付きリスト（ol）で作成してください。</p>
+        <!-- ここに好きな食べ物のリストを作成してください -->
+        <ol>
+            <li>ラーメン</li>
+            <li>寿司</li>
+            <li>ハンバーガー</li>
+            <li>焼肉</li>
+            <li>パスタ</li>
+        </ol>
+    </div>
+    <div>
+        <h2>🔗 課題3: リンク作成</h2>
+        <p><strong>指示:</strong> 以下のリンクを作成してください：</p>
+        <ul>
+            <li>Google（新しいタブで開く）</li>
+            <li>GitHub（新しいタブで開く）</li>
+        </ul>
+      <!-- ここにリンクを作成してください -->
+        <ul>
+            <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+    <h1>お薦めな食べ物の紹介</h1>
+<p>お勧めの食べ物はサラダです。
+    野菜を多く摂ることが出来ます。
+
+
+ <a href="second.html">お薦めな旅行先の紹介</a></p>
+</body>
+</html>

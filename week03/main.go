@@ -1,13 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+	"time"
+	"math/rand"
+)
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 func main() {
-	// Week 03: ここに課題のコードを記述してください
-	// 詳細な課題内容はLMSで確認してください
-	
-	fmt.Println("Week 03 課題")
-	
-	// 以下に実装してください
-	
+    fmt.Println("Week 03 課題")
+
+	http.HandleFunc("/webfortune", webfortunehandler)
+
+	http.ListenAndServe(":8080", nil)
+}
+
+func webfortunehandler(w http.ResponseWriter, r *http.Request) {
+	fortunes := []string{"大吉", "中吉", "吉", "小吉", "末吉", "凶"}
+
+	index := rand.Intn(len(fortunes))
+	result := fortunes[index]
+
+	fmt.Fprintf(w, "今日の運勢は**%s**です！", result)
 }
